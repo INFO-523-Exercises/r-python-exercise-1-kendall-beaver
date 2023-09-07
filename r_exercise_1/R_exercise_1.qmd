@@ -1,5 +1,7 @@
 ---
 title: "R_exercise_1"
+author: "Kendall Beaver"
+format: html
 ---
 
 ## Quarto
@@ -7,4 +9,12 @@ title: "R_exercise_1"
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
 R.version
+library("usethis")
+git_sitrep() # git situation report
 
+install.packages("usethis")
+
+library("usethis")
+git_sitrep() # git situation report
+
+usethis::create_github_token()
