@@ -3,14 +3,5 @@ title: "R/Python Exercise 1"
 format: html
 editor: visual
 ---
-install.packages("pacman")
 
-library(pacman)
-
-p_load(dlookr, DMwR2, GGally, Hmisc, palmerpenguins,   tidyverse)
-
-data(algae, package = "DMwR2")
-
-algae |> glimpse()
-
----
+------------------------------------------------------------------------
