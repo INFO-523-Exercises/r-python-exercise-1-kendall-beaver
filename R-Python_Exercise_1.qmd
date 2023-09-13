@@ -15,4 +15,61 @@ p_load(dlookr,
        Hmisc, 
        palmerpenguins, 
        tidyverse)
+       
+data(algae, package = "DMwR2")
+
+algae |> glimpse()
+
+algae$a1 |>
+  mean()
+
+algae$a1 |>
+  median()
+
+Mode <- function(x, na.rm=FALSE){
+if(na.rm) x<-x[!is.na(x)]
+ux <- unique (x)
+return (ux[which.max(tabulate(match(x, ux)))])
+}
+
+algae$a2 |> Mode()
+
+algae$a1 |> centralValue()
+
+algae$speed |> centralValue()
+
+algae$a1 |> var()
+
+algae$a1 |> sd()
+
+algae$a1 |> range()
+
+algae$a1 |> max()
+
+algae$a1 |> min()
+
+algae$a1 |> IQR()
+
+algae$a1 |> quantile()
+
+algae$a1 |> quantile(probs = c(0.2, 0.8))
+
+library(purrr)
+
+nas <- algae %>% 
+  purrr::map_dbl(~sum(is.na(.))) %>% 
+  sum()
+
+cat("The dataset contains ", nas, "NA values. \n")
+
+incomplete_rows <- algae %>% 
+  summarise_all(~!complete.cases(.)) %>%
+  nrow()
+
+algae |> summary()
+
+data("penguins")
+penguins |> Hmisc::describe()
+
+
 ```
