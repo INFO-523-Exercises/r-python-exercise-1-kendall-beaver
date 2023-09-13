@@ -1,0 +1,14 @@
+---
+title: "r-python-exercise-1-kendall-beaver"
+author: "Kendall Beaver"
+date: "2023-09-13"
+output: html_document
+---
+install.packages("pacman")
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
