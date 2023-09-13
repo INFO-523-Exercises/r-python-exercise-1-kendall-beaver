@@ -4,32 +4,39 @@ format: html
 editor: visual
 ---
 
+\`\`\`{r}
+
+#\| label: load-packages
+
+#\| include: false
+
+library(tidyverse)
+
+library(palmerpenguins)
+
+```         
+install.packages("pacman")
+
+> library(pacman)
+> data("penguins")
+> penguins |> Hmisc::describe()
+```
+
 install.packages("pacman")
 
 library(pacman)
 
-p_load(dlookr,
-DMwR2
-GGally
-Hmisc
-palmerpenguins
-tidyverse
+p_load(dlookr, DMwR2 GGally Hmisc palmerpenguins tidyverse
 
 data(algae, package = "DMwR2")
 
 algae \|\> glimpse()
 
-algae\$a1 \|\>
-mean()
+algae\$a1 \|\> mean()
 
-algae\$a1 \|\>
-median()
+algae\$a1 \|\> median()
 
-Mode \<- function(x, na.rm=FALSE){
-if(na.rm) x\<-x\[!is.na(x)\]
-ux \<- unique (x)
-return (ux\[which.max(tabulate(match(x, ux)))\])
-}
+Mode \<- function(x, na.rm=FALSE){ if(na.rm) x\<-x\[!is.na(x)\] ux \<- unique (x) return (ux\[which.max(tabulate(match(x, ux)))\]) }
 
 algae\$a2 \|\> Mode()
 
@@ -55,8 +62,6 @@ algae\$a1 \|\> quantile(probs = c(0.2, 0.8))
 
 library(purrr)
 
-nas \<- algae %\>%
-purrr::map_dbl(\~sum(is.na(.))) %\>%
-sum()
+nas \<- algae %\>% purrr::map_dbl(\~sum(is.na(.))) %\>% sum()
 
-cat("The dataset contains ", nas, "NA values. \\n")
+cat("The dataset contains", nas, "NA values. \\n")

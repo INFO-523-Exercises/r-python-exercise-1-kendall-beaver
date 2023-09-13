@@ -60,12 +60,37 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>```{r}</p>
+<p>#| label: load-packages</p>
+<p>#| include: false</p>
+<p>library(tidyverse)</p>
+<p>library(palmerpenguins)</p>
+<pre><code>install.packages("pacman")
+
+&gt; library(pacman)
+&gt; </code></pre>
 <p>install.packages(“pacman”)</p>
 <p>library(pacman)</p>
-<p>p_load(dlookr, DMwR2, GGally, Hmisc, palmerpenguins, tidyverse)</p>
+<p>p_load(dlookr, DMwR2 GGally Hmisc palmerpenguins tidyverse</p>
 <p>data(algae, package = “DMwR2”)</p>
 <p>algae |&gt; glimpse()</p>
-<hr>
+<p>algae$a1 |&gt; mean()</p>
+<p>algae$a1 |&gt; median()</p>
+<p>Mode &lt;- function(x, na.rm=FALSE){ if(na.rm) x&lt;-x[!is.na(x)] ux &lt;- unique (x) return (ux[which.max(tabulate(match(x, ux)))]) }</p>
+<p>algae$a2 |&gt; Mode()</p>
+<p>algae$a1 |&gt; centralValue()</p>
+<p>algae$speed |&gt; centralValue()</p>
+<p>algae$a1 |&gt; var()</p>
+<p>algae$a1 |&gt; sd()</p>
+<p>algae$a1 |&gt; range()</p>
+<p>algae$a1 |&gt; max()</p>
+<p>algae$a1 |&gt; min()</p>
+<p>algae$a1 |&gt; IQR()</p>
+<p>algae$a1 |&gt; quantile()</p>
+<p>algae$a1 |&gt; quantile(probs = c(0.2, 0.8))</p>
+<p>library(purrr)</p>
+<p>nas &lt;- algae %&gt;% purrr::map_dbl(~sum(is.na(.))) %&gt;% sum()</p>
+<p>cat(“The dataset contains”, nas, “NA values. \n”)</p>
 
 </main>
 <!-- /main column -->
