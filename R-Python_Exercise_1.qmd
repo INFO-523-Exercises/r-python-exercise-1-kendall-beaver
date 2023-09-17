@@ -4,8 +4,6 @@ format: html
 editor: visual
 ---
 
-###### (Note to self: Installing packages in a code chunk won't make the document render, so you'll need to run it separately in the console.)
-
 ```{r}
 library(pacman)
 
