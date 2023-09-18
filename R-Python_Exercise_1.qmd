@@ -81,7 +81,7 @@ algae |>
 
 algae |>
   select(a1:a7) |>
-  summarise_all(funs(var))
+  summarise_all(list(var))
 
 algae |>
   select(a1:a7) |>
