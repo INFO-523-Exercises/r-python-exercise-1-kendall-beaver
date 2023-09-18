@@ -8,13 +8,10 @@ format: html
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-R.version
-library("usethis")
-git_sitrep() # git situation report
+R.version library("usethis") git_sitrep() \# git situation report
 
 install.packages("usethis")
 
-library("usethis")
-git_sitrep() # git situation report
+library("usethis") git_sitrep() \# git situation report
 
 usethis::create_github_token()
